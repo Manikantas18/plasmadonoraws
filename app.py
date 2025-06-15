@@ -48,7 +48,7 @@ def loginpage():
     if('errorType' in data):
         return render_template('login.html', pred="The username is not found, recheck the spelling or please register.")
     else:
-        if(passw==data['password']):
+        if(passw==data['Password']):
             return redirect(url_for('stats'))
         else:
             return render_template('login.html', pred="Login unsuccessful. You have entered the wrong password.") 
